@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400;500;600&display=swap');
+*{
+    font-family: 'Sen', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;  
+    text-transform: capitalize;
+    transition:all 0.2s linear;
+    
+}
+form{
+    width: 1000px;
+    height: auto;
+    background-color: white;
+    box-shadow: 0 0.5rem 1rem grey;
+    display: flex;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+form .left{
+    width: 100%;
+    height: auto;
+    padding: 30px 20px;
+    text-align: center;
+}
+.left h3{
+    margin: 40px 40px;
+    font-size: 40px;
+}
+
+.left a{
+    color: black;
+}
+
+.left i{
+    font-size: 25px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 50%;
+    transition: 0.2s linear;
+    color: blue;
+    border: 1px solid blue;
+}
+
+.left i:hover{
+    transform: scale(1.25);
+}
+
+
+.left .txt{
+    color: grey;
+    background: rgba(196, 196, 196, 0.597);
+    border: none;
+    width: 40%;
+    margin: auto;
+    display: block;
+    height: 30px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    padding: 25px;
+    font-size: 22px;
+    border-radius: 1px;
+    
+
+}
+
+
+
+.left .btn{ 
+    border: 1px solid blue;
+    font-size: 25px;
+    padding: 5px 20px;
+    border-radius: 30px;
+    color: blue  ;
+    cursor: pointer;  /*biến con trỏ thành hình bàn tay*/
+    transition: 0.2s linear;
+}
+
+.left .btn:hover{
+    background: rgb(255, 166, 0);
+    color: white;
+}
+
+p{
+    color: blue;
+    font-size: 30px;
+    padding: 10px;
+}
+
+
+
+
+
+

@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400;500;600&display=swap');
+*{
+    font-family: 'Sen', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;  
+    text-transform: capitalize;
+    transition:all 0.2s linear;
+    
+}
+form{
+    width: 1000px;
+    height: 400px;
+    background-color: white;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .1);
+    display: flex;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+form .left{
+    width: 50%;
+    height: auto;
+    padding: 30px 20px;
+    text-align: center;
+}
+.left h3{
+    font-weight: bold;
+    color: blue;
+    font-size: 40px;
+}
+
+.left a{
+    color: blue;
+}
+
+
+.left i{
+    font-size: 25px;
+    padding: 10px;
+    border: 1px solid black;
+    margin: 25px 3px;
+    border-radius: 50%;
+    transition: 0.2s linear;
+    border: 1px solid blue;
+}
+
+.left i:hover{
+    color: #blue;
+    transform: scale(1.25);
+    
+}
+
+
+.left .txt{
+    width: 80%;
+    margin: auto;
+    display: block;
+    height: 30px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    padding: 25px;
+    color: grey;
+    background: rgba(196, 196, 196, 0.597);
+    font-size: 22px;
+    border-radius: 1px;
+    border: none;
+    /* box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .1); */
+    
+
+}
+
+.left .btn{
+    font-size: 25px;
+    padding: 5px 20px;    
+    border-radius: 30px;
+    border: 1px solid blue;
+    color: blue;
+    cursor: pointer;  /*biến con trỏ thành hình bàn tay*/
+    transition: 0.2s linear;
+}
+
+.left .btn:hover{
+    color: white;
+    background: blue;
+}
+
+form .right{
+    width: 50%;
+    height: auto;
+    padding: 30px 10px;
+    color: white;
+    text-align: center;
+    background-color: blue;
+
+}
+
+.right h3{
+    font-size: 40px;
+    margin: 30px 0;
+}
+
+.right p{
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.right .btn{
+    font-size: 25px;
+    padding: 7px 20px;
+    border-radius: 30px;
+    cursor: pointer; 
+    border: 1px solid white;
+    color: #fff;
+    margin-top: 20px;
+    transition:  0.2s linear;
+}
+
+.right .btn:hover{
+    color: white;
+}
+
+
+
+
+
+
+
+

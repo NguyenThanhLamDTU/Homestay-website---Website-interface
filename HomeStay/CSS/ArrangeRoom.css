@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400;500;600&display=swap');
+*{
+    font-family: 'Sen', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;  
+    text-transform: capitalize;
+    transition:all 0.2s linear;
+    font-size: 20px;
+    
+}
+
+html{   
+    
+    font-size: 80%;
+    scroll-padding-top: 6rem;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f5f5f5;
+    margin-top: 20px;
+}
+
+.menu nav{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    background: #fff;
+    padding: 1rem 12%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+
+ .menu nav .logo{
+    font-size: 2rem;
+    color:var(--black);
+    padding-right: 3rem;
+}
+
+ .menu nav a{
+    font-size: 1.5rem;
+    color:var(--black);
+    margin: 0 1rem;
+}
+
+.menu nav ul li a{
+    color: #fff;
+    border-radius: 2rem;
+    
+}
+
+.menu ul li a:hover{
+    background: blue;
+}
+
+.menu .icon a{
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
+
+.menu .icon a:hover{
+    color: blue;
+    transform: scale(1.5);
+}
+
+
+.search-bar {
+    display: none;
+    margin-left: 10px;
+    align-items: center;
+    position: relative;
+}
+
+#search-input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#search-button {
+    padding: 5px 10px;
+    background-color: blue;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+
+.booking {
+
+    background-image: url('./PreviewIMG.jpg');
+    background-size: cover;
+    background-position: center;
+    color: rgb(255, 255, 255);
+    padding: 15% 0;
+    text-align: center;
+    
+}
+
+.booking h1 {
+    font-size: 42px;
+}
+
+.booking p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.col-sm-4 {
+    width: 32%;
+    margin-bottom: 20px;
+}
+
+.container .row .btn{
+    background: #E9B824;
+    border: none;
+}
+
+.container .row .btn:hover{
+    background-color: rgb(255, 201, 100);
+}
+
+input[type="date"],
+select,
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+a.btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+a.btn:hover {
+    background-color: #0056b3;
+}
+
+.container .row .btn{
+    width: 100px;
+    display: flex;
+    font-size: 20px; 
+    justify-content: center;
+    margin-left: 50%;
+    transition: .2s linear;
+    
+}
+
+
+
+
+.container .row .img{
+    border: 0.5px solid rgba(128, 128, 128, 0.333);
+    border-radius: 10%;
+    cursor: pointer;
+    margin-left: 25px;
+    
+    
+}
+
+.container .row .img:hover{
+    transform: scale(1.02);
+    
+}
+
+.container .row h2,p{
+    text-align: center;
+    
+}
+
+
+.container .row .viewmore{
+    padding: 1rem 50%;
+    margin-top: 3rem;
+}
+
+.container .row .a button{
+    font-size: 1.5rem;
+    padding: 10px 30px;
+    background: #fff;
+    border-radius: 10px 20px;
+    border: 1px solid #E9B824;
+    color: #E9B824;
+    transition: 0.2s linear;
+    text-decoration: none;
+    outline: none;
+
+}
+
+.container .text-left{
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.mt-5 .click-here{
+    background: none;
+    color: #E9B824;
+    text-decoration: none;
+    outline: none;
+    border: 1px solid #E9B824;
+    transition: .2s linear;
+}
+
+.mt-5 .click-here:hover{
+    background: #E9B824;
+    color: white;
+}
+
+
+
+
+.footer {
+    padding: 40px 0;
+    color: #fff;
+}
+
+.footer p {
+    font-size: 16px;
+}
+
+.footer i {
+    margin-right: 10px;
+}
+
+.footer .list-inline-item {
+    margin-right: 20px;
+}
+
+

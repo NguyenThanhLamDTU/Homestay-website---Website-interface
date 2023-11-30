@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home-Stay Manager</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./CSS/ArrangeRoom.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="menu">
+        <nav class="navbar navbar-expand-sm navbar-light bg-light menu">
+            <a class="navbar-brand logo" href="#">CDIOHomeStay</a>        
+            <div class="collapse navbar-collapse element" id="collapsibleNavId">
+              <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active" >
+                  <a class="nav-link" href="./index1.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Room <span class="sr-only">(current)</span></a>
+                </li>
+              </ul>                                  
+            </div>
+            <div class="icon">
+              <div class="search-container">
+                <a href="">
+                  <img style="border-radius: 30px; margin-left: 20px;" src="./img/GD 1.png" alt="" width="50px" height="50px">
+                </a>
+                <a href="./userpage.html" style="padding-right: 0px;">Nguyen Thanh Lam</a>
+                <a href="#" id="search-icon" class="fas fa-search"></a>
+                <a href="./CancelBooking.html" class="fas fa-heart" style="text-decoration: none; outline: none; border: none; margin-right: -20px;"></a>
+                <div class="search-bar" id="search-bar">
+                  <input type="text" id="search-input" placeholder="Search...">
+                  <button id="search-button">Search</button>
+                </div>
+              </div>
+            </div>
+          </nav>
+    </div>
+
+    <div class="container mt-5 pb-5">
+        <h2 style="border: 1px solid black; width: 15%; text-align: center; font-size: 3rem; margin: 30px;">Room</h2>
+        
+        <!-- Add Room Modal -->
+        <div id="add-room-modal" class="modal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Add new room</h5>
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span>&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="add-room-form">
+                            <div class="form-group">
+                                <label for="new-room-name">Room Name:</label>
+                                <input type="text" class="form-control" id="new-room-name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="new-room-price">Room Price:</label>
+                                <input type="number" class="form-control" id="new-room-price" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="new-room-image">Image:</label>
+                                <input type="file" class="form-control" id="new-room-image" accept="image/*">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-primary" id="add-room-button">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button id="add-room" class="btn btn-success mb-3">Add Room</button>
+
+        <!-- Delete Room Dropdown -->
+        <div class="form-group">
+            <label for="delete-room">Select Room:</label>
+            <select id="delete-room" class="form-control"></select>
+        </div>
+        <button id="delete-room-button" class="btn btn-danger">Delete Room</button>
+
+        <div class="row" id="room-list">
+            <!-- Room cards will be displayed here... -->
+        </div>
+    </div>
+
+    <!-- Edit Room Modal -->
+    <div id="edit-room-modal" class="modal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Edit Room</h5>
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="edit-room-form">
+                        <input type="hidden" id="edit-room-id">
+                        <div class="form-group">
+                            <label for="edit-room-name">Room name:</label>
+                            <input type="text" class="form-control" id="edit-room-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="edit-room-price">Room price:</label>
+                            <input type="number" class="form-control" id="edit-room-price" required>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" id="update-room-button">Update</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        let rooms = [
+            // Sample room data
+        ];
+
+        // Function to populate the room list
+        function populateRoomList() {
+            const roomList = document.getElementById("room-list");
+            roomList.innerHTML = "";
+
+            rooms.forEach((room) => {
+                const card = document.createElement("div");
+                card.classList.add("col-sm-4", "text-left");
+                card.innerHTML = `
+                    <img class="img" src="${room.image}" alt="" width="300" height="300">
+                    <h2>${room.name}</h2>
+                    <p>${room.price} VNĐ</p>
+                    <button class="btn btn-primary edit-btn" data-id="${room.id}" data-toggle="modal" data-target="#edit-room-modal">Edit</button>
+                    <hr class="mt-5 mb-5">
+                `;
+                roomList.appendChild(card);
+            });
+        }
+
+        function populateEditModal(roomId) {
+            const roomToEdit = rooms.find((room) => room.id === roomId);
+            if (roomToEdit) {
+                document.getElementById("edit-room-id").value = roomToEdit.id;
+                document.getElementById("edit-room-name").value = roomToEdit.name;
+                document.getElementById("edit-room-price").value = roomToEdit.price;
+            }
+        }
+
+        document.getElementById("update-room-button").addEventListener("click", function () {
+            const roomIdToUpdate = parseInt(document.getElementById("edit-room-id").value);
+            const updatedRoomName = document.getElementById("edit-room-name").value;
+            const updatedRoomPrice = parseFloat(document.getElementById("edit-room-price").value);
+
+            if (updatedRoomName && !isNaN(updatedRoomPrice)) {
+                const roomToUpdate = rooms.find((room) => room.id === roomIdToUpdate);
+                if (roomToUpdate) {
+                    roomToUpdate.name = updatedRoomName;
+                    roomToUpdate.price = updatedRoomPrice;
+
+                    $('#edit-room-modal').modal('hide');
+
+                    populateRoomList();
+                }
+            }
+        });
+
+        document.getElementById("room-list").addEventListener("click", function (e) {
+            if (e.target.classList.contains("edit-btn")) {
+                const roomId = parseInt(e.target.getAttribute("data-id"));
+                populateEditModal(roomId);
+                $('#edit-room-modal').modal('show');
+            }
+        });
+
+        // Function to handle room addition
+        document.getElementById("add-room-button").addEventListener("click", function () {
+            const newRoomName = document.getElementById("new-room-name").value;
+            const newRoomPrice = parseFloat(document.getElementById("new-room-price").value);
+            const newRoomImage = document.getElementById("new-room-image").files[0];
+
+            if (newRoomName && !isNaN(newRoomPrice)) {
+                // Create a new room object
+                const newRoom = {
+                    id: rooms.length + 1, 
+                    name: newRoomName,
+                    price: newRoomPrice,
+                    image: URL.createObjectURL(newRoomImage), 
+                };
+                rooms.push(newRoom);
+
+                $('#add-room-modal').modal('hide');
+                document.getElementById("new-room-name").value = "";
+                document.getElementById("new-room-price").value = "";
+                document.getElementById("new-room-image").value = "";
+
+                populateRoomList();
+            }
+        });
+
+        document.getElementById("add-room").addEventListener("click", function () {
+            $('#add-room-modal').modal('show');
+        });
+
+    </script>
+</body>
+</html>

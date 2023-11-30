@@ -1,0 +1,290 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400;500;600&display=swap');
+*{
+    font-family: 'Sen', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;  
+    text-transform: capitalize;
+    transition:all 0.2s linear;
+    font-size: 20px;
+    
+}
+
+html{   
+    font-size: 80%;
+    scroll-padding-top: 6rem;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f5f5f5;
+    margin-top: 20px;
+}
+
+.menu nav{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    background: #fff;
+    padding: 1rem 12%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+
+ .menu nav .logo{
+    font-size: 2rem;
+    color:var(--black);
+    padding-right: 3rem;
+}
+
+ .menu nav a{
+    font-size: 1.5rem;
+    color:var(--black);
+    margin: 0 1rem;
+}
+
+.menu nav ul li a{
+    color: #fff;
+    border-radius: 2rem;
+    
+}
+
+.menu ul li a:hover{
+    background: blue;
+}
+
+.menu .icon a{
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
+
+.menu .icon a:hover{
+    color: blue;
+    transform: scale(1.5);
+}
+
+.search-bar {
+    display: none;
+    margin-left: 10px;
+    align-items: center;
+    position: relative;
+}
+
+#search-input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#search-button {
+    padding: 5px 10px;
+    background-color: blue;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+.hero {
+    background-image: url('./PreviewIMG.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 15% 0;
+    text-align: center;
+    
+}
+
+.hero h1 {
+    font-size: 42px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+
+.features {
+    background-color: #fff;
+    padding: 50px 0;
+}
+
+.features i {
+    font-size: 64px;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.features h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.features p {
+    font-size: 18px;
+}
+
+
+.testimonials {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+}
+
+.testimonial-item {
+    margin-bottom: 30px;
+}
+
+.testimonial-item i {
+    color: #007bff;
+}
+
+
+.pricing {
+    padding: 50px 0;
+}
+
+.pricing h2 {
+    margin-bottom: 30px;
+}
+
+.pricing-card {
+    border: 1px solid #ccc;
+    padding: 30px;
+    text-align: center;
+}
+
+.pricing-card h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.pricing-card .price {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.pricing-card ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.pricing-card ul li {
+    margin-bottom: 10px;
+}
+
+.pricing-card.popular {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.pricing-card.popular h3 {
+    color: #fff;
+}
+
+.pricing-card.popular .price {
+    color: #fff;
+}
+
+.pricing-card.popular a {
+    background-color: #fff;
+    color: #007bff;
+    border: none;
+}
+
+/* Contact */
+.contact {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+}
+
+.contact h2 {
+    margin-bottom: 30px;
+}
+
+.contact-form {
+    margin-bottom: 30px;
+}
+
+/* Footer */
+.footer {
+    padding: 40px 0;
+    color: #fff;
+}
+
+
+.footer p {
+    font-size: 16px;
+}
+
+.footer i {
+    margin-right: 10px;
+}
+
+.footer .list-inline-item {
+    margin-right: 20px;
+}
+
+
+@media (max-width: 768px) {
+    /* Navbar */
+    .navbar {
+        padding: 10px 0;
+    }
+
+    .navbar-brand {
+        font-size: 24px;
+    }
+
+    .nav-item {
+        margin-left: 10px;
+    }
+
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+
+    .features i {
+        font-size: 48px;
+    }
+
+    .features h3 {
+        font-size: 20px;
+    }
+
+    .features p {
+        font-size: 16px;
+    }
+
+  
+    .testimonial-item i {
+        font-size: 24px;
+    }
+
+    .pricing-card h3 {
+        font-size: 20px;
+    }
+
+    .pricing-card .price {
+        font-size: 24px;
+    }
+
+   
+    .contact h2 {
+        font-size: 28px;
+    }
+}
+
+
+
+
+

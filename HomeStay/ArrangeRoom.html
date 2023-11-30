@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home-Stay Manager</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./CSS/ArrangeRoom.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+   
+    <div class="menu">
+        <nav class="navbar navbar-expand-sm navbar-light bg-light menu">
+            <a class="navbar-brand logo" href="#">CDIOHomeStay</a>        
+            <div class="collapse navbar-collapse element" id="collapsibleNavId">
+              <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active" >
+                  <a class="nav-link" href="./index1.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Room <span class="sr-only">(current)</span></a>
+                </li>
+                
+                
+                
+              </ul>                                  
+            </div>
+            <div class="icon">
+              <div class="search-container">
+            <a href="">
+              <img style="border-radius: 30px; margin-left: 20px;" src="./img/GD 1.png" alt="" width="50px" height="50px">
+            </a>
+            <a href="./userpage.html" style="padding-right: 0px;">Nguyen Thanh Lam</a>
+                  <a href="#" id="search-icon" class="fas fa-search"></a>
+                  <a href="./CancelBooking.html" class="fas fa-heart" style="text-decoration: none; outline: none; border: none; margin-right: -20px;"></a>
+                  <div class="search-bar" id="search-bar">
+                      <input type="text" id="search-input" placeholder="Search...">
+                      <button id="search-button">Search</button>
+                  </div>
+              </div>
+              
+            
+        </div>
+          </nav>
+      </div>
+
+   
+      <header class="booking">
+        <div class="container">
+            <div class="row" style="background: white; padding: 20px; border-radius: 20px; box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);">
+                <div class="col-sm-4">
+                  <p style="color: black;">Received date</p>
+                    <input type="date" name="check-in" id="check-in" placeholder="Check-In Date">
+                    <p style="color: black;">Expired date</p>
+                    <input type="date" name="check-out" id="check-out" placeholder="Check-Out Date">
+                </div>
+                <div class="col-sm-4">
+                  <p style="color: black;">Room Type</p> 
+                    <select name="room-type" id="room-type">
+                        <option value="">Select Room Type:</option>
+                        <option value="single">Single</option>
+                        <option value="double">Double</option>
+                        <option value="suite">Suite</option>
+                    </select>
+                    <p style="color: black;">Discount</p>
+                    <input type="text" name="discount" id="discount" placeholder="discount">
+                </div>
+                <div class="col-sm-4">
+                  <p style="color: black;">Kids</p>
+                    <select name="kids" id="kids">
+                        <option value="0">Select:</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                    <p style="color: black;">Adults</p>
+                    
+                    <select name="adults" id="adults">
+                        <option value="1">Select:</option>
+                        <option value="2">1</option>
+                        <option value="3">2</option>
+                        <option value="4">3</option>
+                    </select>
+                    
+                </div>
+                <a  class="btn btn-primary" href="./fill-info.html" role="button" style="background-color: blue;">Book</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container mt-5 pb-5">
+        <h2 style="border: 1px solid black; width: 15%; text-align: center; font-size: 3rem; margin: 30px;">Room</h2>
+        <div class="row">
+          <div class="col-sm-4 text-left">
+            <a href="./RoomDetail.html" style="text-decoration: none; outline: none; border: none; color: black;">
+              <img  class="img" src="./img/VIEW BIEN 1.png" alt="" width="300" height="300">
+              <h2>Couple Room Beach View</h2>
+              <p>Lorem ipsum dolor sit amet. <br>600.000 VNĐ</p>            
+              <hr class="mt-5 mb-5">
+            </a>                  
+          </div>        
+          <div class="col-sm-4 text-left">
+            <a href="./RoomDetail.html" style="text-decoration: none; outline: none; border: none; color: black;">
+              <img  class="img" src="./img/VIEW BIEN 1.png" alt="" width="300" height="300">
+              <h2>Couple Room Beach View</h2>
+              <p>Lorem ipsum dolor sit amet. <br>600.000 VNĐ</p>            
+              <hr class="mt-5 mb-5">
+            </a>                  
+          </div>        
+          <div class="col-sm-4 text-left">
+            <a href="./RoomDetail.html" style="text-decoration: none; outline: none; border: none; color: black;">
+              <img  class="img" src="./img/VIEW BIEN 1.png" alt="" width="300" height="300">
+              <h2>Couple Room Beach View</h2>
+              <p>Lorem ipsum dolor sit amet. <br>600.000 VNĐ</p>            
+              <hr class="mt-5 mb-5">
+            </a>                  
+          </div>        
+          
+         
+          
+          </div>
+        <div class="row">
+          <div class="col-sm-4 text-left">
+            <a href="./RoomDetail.html" style="text-decoration: none; outline: none; border: none; color: black;">
+              <img  class="img" src="./img/VIEW BIEN 1.png" alt="" width="300" height="300">
+              <h2>Couple Room Beach View</h2>
+              <p>Lorem ipsum dolor sit amet. <br>600.000 VNĐ</p>            
+              <hr class="mt-5 mb-5">
+            </a>                  
+          </div>        
+         
+          <div class="col-sm-4 text-left">
+            <a href="./RoomDetail.html" style="text-decoration: none; outline: none; border: none; color: black;">
+              <img  class="img" src="./img/VIEW BIEN 1.png" alt="" width="300" height="300">
+              <h2>Couple Room Beach View</h2>
+              <p>Lorem ipsum dolor sit amet. <br>600.000 VNĐ</p>            
+              <hr class="mt-5 mb-5">
+            </a>                  
+          </div>        
+         
+          <div class="col-sm-4 text-left">
+            <a href="./RoomDetail.html" style="text-decoration: none; outline: none; border: none; color: black;">
+              <img  class="img" src="./img/VIEW BIEN 1.png" alt="" width="300" height="300">
+              <h2>Couple Room Beach View</h2>
+              <p>Lorem ipsum dolor sit amet. <br>600.000 VNĐ</p>            
+              <hr class="mt-5 mb-5">
+            </a>                  
+          </div>        
+         
+         
+          
+          </div>
+        <div class="row">
+          <div class="col-sm-4 text-left">
+            <a href="./RoomDetail.html" style="text-decoration: none; outline: none; border: none; color: black;">
+              <img  class="img" src="./img/VIEW BIEN 1.png" alt="" width="300" height="300">
+              <h2>Couple Room Beach View</h2>
+              <p>Lorem ipsum dolor sit amet. <br>600.000 VNĐ</p>            
+              <hr class="mt-5 mb-5">
+            </a>                  
+          </div>        
+          <div class="col-sm-4 text-left">
+            <a href="./RoomDetail.html" style="text-decoration: none; outline: none; border: none; color: black;">
+              <img  class="img" src="./img/VIEW BIEN 1.png" alt="" width="300" height="300">
+              <h2>Couple Room Beach View</h2>
+              <p>Lorem ipsum dolor sit amet. <br>600.000 VNĐ</p>            
+              <hr class="mt-5 mb-5">
+            </a>                  
+          </div>        
+          <div class="col-sm-4 text-left">
+            <a href="./RoomDetail.html" style="text-decoration: none; outline: none; border: none; color: black;">
+              <img  class="img" src="./img/VIEW BIEN 1.png" alt="" width="300" height="300">
+              <h2>Couple Room Beach View</h2>
+              <p>Lorem ipsum dolor sit amet. <br>600.000 VNĐ</p>            
+              <hr class="mt-5 mb-5">
+            </a>                  
+          </div>        
+          
+         
+          <a  class="btn btn-primary" href="#" role="button" style="background-color: blue;">More</a>
+          </div>
+       </div>
+    
+  
+
+   
+   
+   
+
+
+
+    
+   
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    
+                    <p><i class="fas fa-map-marker-alt"></i> Duy Tan University</p>
+                    <p><i class="fas fa-envelope"></i> nguyenthanhlamdev@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> 0347305124</p>
+                </div>
+              
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      document.getElementById('search-icon').addEventListener('click', function () {
+    const searchBar = document.getElementById('search-bar');
+    if (searchBar.style.display === 'none' || searchBar.style.display === '') {
+        searchBar.style.display = 'flex';
+    } else {
+        searchBar.style.display = 'none';
+    }
+});
+
+    </script>
+  </body>
+</html>
